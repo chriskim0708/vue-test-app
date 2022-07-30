@@ -82,7 +82,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import useForm, { TValid } from "../composables/useForm.vue";
+import useForm, { TValid } from "../composables/useForm";
 
 interface FormControl {
   value: string;

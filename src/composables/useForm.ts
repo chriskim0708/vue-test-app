@@ -1,4 +1,3 @@
-<script lang="ts">
 import { reactive } from "vue";
 
 enum Valid {
@@ -80,4 +79,3 @@ const useForm = <T extends Object>(initialFormValue: T) => {
 };
 
 export default useForm;
-</script>
