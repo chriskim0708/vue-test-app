@@ -29,7 +29,7 @@ const useForm = <T extends Object>(initialFormValue: T) => {
     if (!value) return false;
     const regex = /([0-9]{4})-?([0-9]{4})-?([0-9]{4})-?([0-9]{4})/;
     const regTest = regex.test(value);
-    console.log("card regTest", regTest);
+
     if (!regTest) return false;
     const reverse = value
       .replace(/[^0-9]/g, "")
@@ -53,7 +53,7 @@ const useForm = <T extends Object>(initialFormValue: T) => {
       }
       return a;
     }, 0);
-    console.log("sum", sumOdd + sumEven);
+
     return (sumOdd + sumEven) % 10 === 0;
   };
   const matchValidFn: { [key in TValid]: Function } = {
@@ -70,7 +70,6 @@ const useForm = <T extends Object>(initialFormValue: T) => {
     error: TValid[];
   }) => {
     if (error.length === 0) return true;
-    console.log("isValid", error);
     return error
       .map((errorName: TValid) =>
         matchValidFn[errorName](value.replace(/ /g, ""))

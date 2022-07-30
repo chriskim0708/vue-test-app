@@ -159,7 +159,6 @@ export default defineComponent({
             isValidCheck(formValue.phoneNumber),
             isValidCheck(formValue.email),
           ].every((valid) => valid === true);
-          console.log(isValidCheck(formValue.email));
           valid && step.value++;
           break;
         }
